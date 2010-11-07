@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	getTestData('Test 1', 'abc', '123');
-})
+});
 
 function getTestData(arg1, arg2, arg3) {
 	$.ajax({
@@ -8,7 +8,7 @@ function getTestData(arg1, arg2, arg3) {
 		dataType: 'json',
 		//data: ,
 		success: getTestDataHandler
-	})
+	});
 }
 
 function getTestDataHandler(data) {

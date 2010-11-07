@@ -55,6 +55,12 @@ class HTML {
 	}
 	
 	/**
+	 * Sets the onload event for the body.  Keep null for no event handler.
+	 * @var string
+	 */
+	private $onload = null;
+	
+	/**
 	 * Constructor for class. 
 	 * @param string $page_title
 	 */
@@ -65,6 +71,7 @@ class HTML {
 		$this->buffer_header = array();
 		$this->header_shown = false;
 		$this->footer_shown = false;
+		$this->onload = null;
 		
 	}
 	
@@ -74,19 +81,32 @@ class HTML {
 		}
 	}
 	
-	
+	/**
+	 * Sets the onload event for the document body.  Nothing will happen if this is
+	 * called after the header is generated.
+	 * @param unknown_type $script
+	 */
+	public function set_onload($script) {
+		$this->onload = $script;
+	}
 	
 	protected function gen_header($title = null) {
 		if (is_null($title)) {
 			$title = $this->page_title;
 		}
 		if (!$this->is_header_shown()) {
+			
+			if (!is_null($this->onload)) {
+				$set_onload = " onload='{$this->onload}'";
+			}
+			else {
+				$set_onload = "";
+			}
 		
 			print "
-<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">
 <title>{$title}</title>
 ";
 			
@@ -94,7 +114,8 @@ class HTML {
 			
 			print "
 </head>
-<body>";
+<body{$set_onload}>
+";
 			$this->header_shown = true;
 		}
 	}
