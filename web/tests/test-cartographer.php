@@ -1,10 +1,12 @@
 <?php
 require_once '../libs/class/HTML.inc';
 
+$google_map_api_key = "ABQIAAAAWBJs6bUTB849oWniJrngxhSYRRYpweuIiD80CXXZ1b62puvuuxRwujqMApwP6xNQX6ASbMp0-FIsxg";
+
 $html = new HTML("Testing Google Map API");
 
 $html->add_script_links("../js/jquery.js");
-$html->add_script_links("http://maps.google.com/maps?file=api&v=2.x&key=ABQIAAAAWBJs6bUTB849oWniJrngxhT2yXp_ZAY8_ufC3CFXhHIE1NvwkxRGq-7eOpz3Q56-leAg7PidgmYgXg");
+$html->add_script_links("http://maps.google.com/maps?file=api&v=2.x&key={$google_map_api_key}");
 $html->add_script_links("../js/raphael-min.js", "../js/cartographer.min.0.4.js");
 
 $html->add_script_links("js/cartographer.js");
