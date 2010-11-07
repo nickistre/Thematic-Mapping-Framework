@@ -7,7 +7,7 @@ $html->add_script_links("../js/jquery.js");
 $html->add_script_links("http://maps.google.com/maps?file=api&v=2.x&key=ABQIAAAAWBJs6bUTB849oWniJrngxhT2yXp_ZAY8_ufC3CFXhHIE1NvwkxRGq-7eOpz3Q56-leAg7PidgmYgXg");
 $html->add_script_links("../js/raphael-min.js", "../js/cartographer.min.0.4.js");
 
-$html->add_script_links("js/cartographer.js");
+$html->add_script_links("js/amfphp-cartograph.js");
 
 
 $html->add_header('<style type="text/css">
