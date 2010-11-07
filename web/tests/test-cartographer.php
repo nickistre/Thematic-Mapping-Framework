@@ -1,7 +1,7 @@
 <?php
 require_once '../libs/class/HTML.inc';
 
-$google_map_api_key = "ABQIAAAAWBJs6bUTB849oWniJrngxhSYRRYpweuIiD80CXXZ1b62puvuuxRwujqMApwP6xNQX6ASbMp0-FIsxg";
+$google_map_api_key = "ABQIAAAAWBJs6bUTB849oWniJrngxhT2yXp_ZAY8_ufC3CFXhHIE1NvwkxRGq-7eOpz3Q56-leAg7PidgmYgXg";
 
 $html = new HTML("Testing Google Map API");
 
