@@ -1,12 +1,12 @@
 $(document).ready(function() {
-	getTestData();
+	getTestData('Test 1', 'abc', '123');
 })
 
-function getTestData() {
+function getTestData(arg1, arg2, arg3) {
 	$.ajax({
-		url: '../amfphp 1.9/json.php/test.test.return_test_data/',
+		url: '../amfphp 1.9/json.php/test.Test.return_test_data/' + arg1 + '/' + arg2 + '/' + arg3,
 		dataType: 'json',
-		//data: null,
+		//data: ,
 		success: getTestDataHandler
 	})
 }
