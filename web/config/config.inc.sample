@@ -11,7 +11,9 @@ class Config {
 	 * @var array
 	 */
 	private $config_data = array(
-	
+		/**
+		 * You should be able to login/signup for the key at the following: http://code.google.com/apis/maps/signup.html
+		 */
 		"google_map_V2_api_key" => "Get Google Map API V2 Key For Your Domain And Insert It Here!",
 		
 	);
