@@ -25,7 +25,7 @@ function initialize() {
 		    
 function getTestData(arg1, arg2, arg3) {
 	$.ajax({
-		url: '../amfphp 1.9/json.php/test.Test.return_test_data/' + arg1 + '/' + arg2 + '/' + arg3,
+		url: '../amfphp/json.php/test.Test.return_test_data/' + arg1 + '/' + arg2 + '/' + arg3,
 		dataType: 'json',
 		//data: ,
 		success: getTestDataHandler
