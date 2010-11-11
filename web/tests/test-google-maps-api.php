@@ -1,9 +1,9 @@
 <?php
-require_once '../libs/class/HTML.inc';
+require_once '../lib/class/HTML.inc';
 
 $html = new HTML("Testing Google Map API");
 
-$html->add_script_links("../js/jquery.js");
+$html->add_script_links("../lib/js/jquery.js");
 $html->add_script_links("http://maps.google.com/maps/api/js?sensor=false", "js/google-maps.js");
 
 $html->add_header('<style type="text/css">

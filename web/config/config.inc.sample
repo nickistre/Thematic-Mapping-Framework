@@ -25,8 +25,8 @@ class Config {
 	 * @return string
 	 */
 	public function get($attr) {
-		if (isset($config_data[$attr])) {
-			return $config_data[$attr];
+		if (isset($this->config_data[$attr])) {
+			return $this->config_data[$attr];
 		}
 		else {
 			die("Invalid attribute: " . $attr);

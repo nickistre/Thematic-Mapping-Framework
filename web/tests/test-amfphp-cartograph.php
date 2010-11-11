@@ -1,5 +1,5 @@
 <?php
-require_once '../libs/class/HTML.inc';
+require_once '../lib/class/HTML.inc';
 require_once '../config/config.inc';
 
 $config = new Config();
@@ -8,9 +8,9 @@ $google_map_api_key = $config->get("google_map_V2_api_key");
 
 $html = new HTML("Testing Google Map API");
 
-$html->add_script_links("../js/jquery.js");
+$html->add_script_links("../lib/js/jquery.js");
 $html->add_script_links("http://maps.google.com/maps?file=api&v=2.x&key={$google_map_api_key}");
-$html->add_script_links("../js/raphael-min.js", "../js/cartographer.min.0.4.js");
+$html->add_script_links("../lib/js/raphael-min.js", "../lib/js/cartographer.min.0.4.js");
 
 $html->add_script_links("js/amfphp-cartograph.js");
 
