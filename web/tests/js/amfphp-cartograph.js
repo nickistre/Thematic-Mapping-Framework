@@ -14,8 +14,8 @@ function initialize() {
 		    map.addControl(new GHierarchicalMapTypeControl());
 		    map.setMapType(G_PHYSICAL_MAP);
 		    
-		    var options = { colorize:"#fff" };
-		    cartographer = Cartographer( map, options );
+		    var options = { };
+		    cartographer = new Cartographer( map, options );
 		    
 		    getTestData("Test 1", "TEst 2", "blah");
 	  }
@@ -35,7 +35,7 @@ function getTestData(arg1, arg2, arg3) {
 function getTestDataHandler(data) {
  
 	// here we specify a custom color scheme
-	var options = { colors:"Spectral" };
+	var options = { colorScheme:"Spectral" };
 	 
 	cartographer.choropleth( data, options );
 }
