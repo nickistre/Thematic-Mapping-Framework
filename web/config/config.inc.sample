@@ -1,0 +1,33 @@
+<?php
+/**
+ * Holds site configuration info.
+ * @author nick
+ *
+ */
+class Config {
+	
+	/**
+	 * Change this to your settings.
+	 * @var array
+	 */
+	private $config_data = array(
+	
+		"google_map_V2_api_key" => "Get Google Map API V2 Key For Your Domain And Insert It Here!",
+		
+	);
+	
+	
+	/**
+	 * Returns the matching configuration data set.
+	 * @param string $attr
+	 * @return string
+	 */
+	public function get($attr) {
+		if (isset($config_data[$attr])) {
+			return $config_data[$attr];
+		}
+		else {
+			die("Invalid attribute: " . $attr);
+		}
+	}
+}

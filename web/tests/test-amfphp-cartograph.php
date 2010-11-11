@@ -1,7 +1,10 @@
 <?php
 require_once '../libs/class/HTML.inc';
+require_once '../config/config.inc';
 
-$google_map_api_key = "ABQIAAAAWBJs6bUTB849oWniJrngxhT2yXp_ZAY8_ufC3CFXhHIE1NvwkxRGq-7eOpz3Q56-leAg7PidgmYgXg";
+$config = new Config();
+
+$google_map_api_key = $config->get("google_map_V2_api_key");
 
 $html = new HTML("Testing Google Map API");
 
